@@ -42,6 +42,21 @@ jobs:
             | xargs -0 python -m py_compile
           echo "  ✅ 全部可编译"
 
+      # 「tag 即发版」的纪律：tag 必须等于 VERSION 文件里的版本号。
+      #   否则会出现「tag 写着 v0.2.0、仓库里还是 0.1.0」这种说不清的发布。
+      - name: 版本可读性（VERSION 存在且是 x.y.z）
+        run: |
+          test -f VERSION
+          V="$(cat VERSION)"        # ★ 必须 strip：Windows 下换行可能是 CRLF
+          printf 'VERSION = %s\n' "$V"
+          echo "$V" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'
+          V="v$V"
+          case "${GITHUB_REF:-}" in
+            refs/tags/*) [ "$V" = "${GITHUB_REF#refs/tags/}" ] || {
+              echo "❌ tag ${GITHUB_REF#refs/tags/} != VERSION $V"; exit 1; } ;;
+            *) echo "  （非 tag 事件，跳过等号校验）" ;;
+          esac
+
   windows:
     name: Windows · CJK 路径（卖点验证）
     runs-on: windows-latest
