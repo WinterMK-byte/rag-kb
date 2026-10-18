@@ -1,0 +1,34 @@
+{"id": "m01", "q": "极限的ε-δ定义是怎么说的", "scope": "kmath", "expect": ["考研数学必备手册"], "note": "定义类"}
+{"id": "m02", "q": "等价无穷小替换公式有哪些", "scope": "mathdoc", "expect": ["Ch2-2-5无穷小的比较", "考研数学必备手册", "第3册解答"], "note": "公式类 [2026-09-26 修：原expect含高等数学公式手册，实测该PDF全文不含「等价无穷小」（是公式速查表）→ 改为检索实际最相关的三份] [2026-09-26 再修：原scope=kmath，但实测正确答案Ch2-2-5无穷小的比较.pdf属mathdoc域(华理数学讲义)，被域隔离挡住；改mathdoc后rank=1。实测kmath→未命中/core→rank1/mathdoc→rank1]"}
+{"id": "m03", "q": "中值定理怎么证明", "scope": "kmath", "expect": ["考研数学重点题型攻克", "高等数学公式手册", "第三篇：导数应用与中值定理篇"], "note": "方法类"}
+{"id": "m04", "q": "插班生数学真题讲解", "scope": "kmath", "expect": ["插班生真题讲解"], "note": "真题类"}
+{"id": "m05", "q": "高数寒假集训班讲了什么", "scope": "kmath", "expect": ["24-25机构A插班生-《高数》寒假集训班"], "note": "课程类"}
+{"id": "m06", "q": "高数重点题型和知识点合集", "scope": "kmath", "expect": ["考研数学重点题型攻克"], "note": "综述类"}
+{"id": "e01", "q": "四级段落翻译怎么做", "scope": "ken", "expect": ["英语四六级考试段落翻译题", "翻译板书中翻英"], "note": "翻译"}
+{"id": "e02", "q": "插班生英语词汇表在哪", "scope": "ken", "expect": ["2025插班生英语精品班词汇表", "734个词组"], "note": "词汇"}
+{"id": "e03", "q": "完形填空真题练习", "scope": "ken", "expect": ["英语_完形填空_选项答案", "华研完形填空", "完型填空"], "note": "完形 [2026-09-26 修：原expect未含新入库真题「英语_完形填空_选项答案_20260630.jpg」（该文件正是top1）→ 补入]"}
+{"id": "e04", "q": "考研英语写作高分突破 话题", "scope": "ken", "expect": ["考研英语写作高分突破"], "note": "写作"}
+{"id": "e05", "q": "985词汇语法选择题及解析", "scope": "ken", "expect": ["985词汇语法选择题"], "note": "语法"}
+{"id": "e06", "q": "英语寒假班全文解析", "scope": "ken", "expect": ["2025年机构A插班生英语寒假班全文解析"], "note": "真题解析"}
+{"id": "c01", "q": "PN结的形成原理", "scope": "gother", "expect": ["1-常用半导体器件"], "note": "已实测正确"}
+{"id": "c02", "q": "电力电子器件的分类和特点", "scope": "gother", "expect": ["电力电子器件概述"], "note": "课件"}
+{"id": "c03", "q": "数列极限的定义 课件", "scope": "gmath", "expect": ["数列极限的定义"], "note": "高数课件"}
+{"id": "c04", "q": "数据结构 图 讲义", "scope": "gother", "expect": ["数据结构-蒋翠玲"], "note": "数据结构"}
+{"id": "c05", "q": "计算机组成原理 附录", "scope": "gother", "expect": ["appendix_C", "appendix_E"], "note": "计组"}
+{"id": "c06", "q": "四六级考试大纲要求", "scope": "gen", "expect": ["四六级考试大纲"], "note": "外语"}
+{"id": "c07", "q": "高数下册作业答案", "scope": "gmath", "expect": ["高数下答案"], "note": "作业答案"}
+{"id": "t01", "q": "sympy 怎么解方程", "scope": "tech", "expect": ["simpy", "sympy"], "note": "技能包"}
+{"id": "t02", "q": "不确定度怎么传播计算", "scope": "tech", "expect": ["propagate_uncertainty", "uncertainty-and-units"], "note": "技能包"}
+{"id": "t03", "q": "RAG 文本分块策略怎么设计", "scope": "tech", "expect": ["01_文本分块策略"], "note": "RAG技术库"}
+{"id": "t04", "q": "ROS2 机器人开发入门", "scope": "tech", "expect": ["ROS2机器人开发"], "note": "robomaster"}
+{"id": "a01", "q": "考插数学极限怎么求", "scope": "auto", "expect": ["考插数学习题资料", "数学真题"], "expect_scope": "kmath", "note": "auto 应向考插"}
+{"id": "a02", "q": "插班生英语作文模板", "scope": "auto", "expect": ["考插英语习题资料"], "expect_scope": "ken", "note": "auto 应向考插"}
+{"id": "m07", "q": "洛必达法则的使用条件是什么", "scope": "mathdoc", "expect": ["ch3-3洛必达法则"], "note": "mathdoc 新增｜只有讲解语料能答"}
+{"id": "m08", "q": "泰勒公式怎么展开 佩亚诺余项", "scope": "mathdoc", "expect": ["ch3-4泰勒公式"], "note": "mathdoc 新增"}
+{"id": "m09", "q": "不定积分基本积分法有哪些", "scope": "mathdoc", "expect": ["Ch6-1不定积分基本积分法"], "note": "mathdoc 新增"}
+{"id": "m10", "q": "广义积分收敛性怎么判别", "scope": "mathdoc", "expect": ["Ch7-4广义积分"], "note": "mathdoc 新增"}
+{"id": "m11", "q": "微分中值定理讲了什么", "scope": "mathdoc", "expect": ["Ch3-2微分中值定理"], "note": "mathdoc 新增"}
+{"id": "m12", "q": "无穷小和无穷大 比较 性质", "scope": "mathdoc", "expect": ["无穷小的比较", "无穷小和无穷大"], "note": "mathdoc 新增"}
+{"id": "m13", "q": "线性代数 特征值与特征向量的求法", "scope": "mathdoc", "expect": ["线性代数总结", "2学分线性代数全面总结", "线性代数考试重点总结"], "note": "mathdoc 新增｜补线代缺口"}
+{"id": "m14", "q": "概率论 随机变量的分布函数 复习", "scope": "mathdoc", "expect": ["第一章复习", "第二章复习"], "note": "mathdoc 新增｜补概率缺口"}
+{"id": "c08", "q": "高数下 微分中值定理 课件", "scope": "gmath", "expect": ["Ch3-2微分中值定理"], "note": "回归对照｜course 域仍应能拿到同一份讲解"}

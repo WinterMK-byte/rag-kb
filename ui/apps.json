@@ -1,0 +1,13 @@
+[
+  {"id": "wechat", "name": "微信", "cmd": "start weixin://", "desc": "聊天 · 文件传输", "tag": "日常"},
+  {"id": "browser", "name": "浏览器", "cmd": "start msedge", "desc": "网页 · 检索", "tag": "日常"},
+  {"id": "terminal", "name": "终端", "cmd": "start wt", "desc": "命令行 · 脚本", "tag": "开发"},
+  {"id": "notepad", "name": "记事本", "cmd": "start notepad", "desc": "速记 · 草稿", "tag": "开发"},
+  {"id": "calc", "name": "计算器", "cmd": "start calc", "desc": "即时计算", "tag": "日常"},
+  {"id": "word", "name": "Word", "cmd": "start winword", "desc": "文档", "tag": "办公"},
+  {"id": "excel", "name": "Excel", "cmd": "start excel", "desc": "表格", "tag": "办公"},
+  {"id": "ppt", "name": "PowerPoint", "cmd": "start powerpnt", "desc": "演示", "tag": "办公"},
+  {"id": "steam", "name": "Steam", "cmd": "start steam://", "desc": "游戏库", "tag": "娱乐"},
+  {"id": "ollama", "name": "Ollama", "cmd": "start ollama", "desc": "本地模型服务", "tag": "开发"},
+  {"id": "kb", "name": "知识库", "link": "#search", "desc": "回到搜索模式", "tag": "工具"}
+]

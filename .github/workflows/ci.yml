@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gates:
+    name: 仓库门禁（脱敏 / 数据层 / 语法）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # ★ 先证明门禁**抓得到错** —— 一条不会报警的门禁等于没有门禁。
+      - name: 门禁工具自测（反向用例优先）
+        run: |
+          python tools/privacy_check.py --selftest
+          python tools/data_layer_check.py --selftest
+
+      # ★ 脱敏门禁：这个仓库是从一个真实在跑的私人知识库抽出来的，
+      #   一次 `git add .` 就可能把私人信息推上公开网络，所以必须机械查一遍。
+      - name: 脱敏自查
+        run: python tools/privacy_check.py
+
+      # ★ 数据层门禁：光靠 .gitignore 挡不住 `git add -f`，
+      #   也挡不住 CI 里某个脚本先把索引生成到仓库里再打包。这里做**事后**拦截。
+      #   （models/ 里的单个 safetensors 超过 100 MB 会被 GitHub 直接拒收）
+      - name: 数据层未误提交
+        run: python tools/data_layer_check.py
+
+      - name: 语法检查（所有 .py）
+        run: |
+          find . -name "*.py" -not -path "./__pycache__/*" -print0 \
+            | xargs -0 python -m py_compile
+          echo "  ✅ 全部可编译"
+
+  windows:
+    name: Windows · CJK 路径（卖点验证）
+    runs-on: windows-latest
+    env:
+      # ★ Windows 控制台默认**不是** UTF-8 —— 不加这两个，
+      #   任何往 stdout 写中文的地方都会 UnicodeEncodeError。
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: "utf-8"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      # ⚠️ Windows runner 默认 shell 是 **pwsh**，中文输出在那里会出问题
+      #    （本机 UTF-8 环境永远发现不了），所以本 job **全部显式用 bash**。
+      - name: 门禁（Windows · 中文输出验证）
+        shell: bash
+        run: |
+          python tools/privacy_check.py
+          python tools/data_layer_check.py

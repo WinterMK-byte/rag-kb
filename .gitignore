@@ -1,0 +1,31 @@
+# ★★ 数据层一律不入库 —— 这几条从不提交 ★★
+# 理由：① 体积（整套 4.9 GB）② 版权（课件与原文）③ 它们拉取即变，是"接线"不是"形状"
+models/                  # 嵌入/重排模型（2.1GB，且单个 safetensors >100MB 会被 GitHub 拒收）
+vector_store*/           # 向量索引（0.43GB，chunk 正文是资料原文的派生品）
+text_cache*/             # OCR 出来的正文（0.64GB，版权同源）
+
+# 中间产物与临时
+temp/
+_scratch/
+*.log
+*.tmp
+
+# 本机私有语料（顺便挡住误提交）
+qbank/questions_math.jsonl    # 真题 OCR 全文，版权
+qbank/*.bak_*                 # 评测集备份
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp

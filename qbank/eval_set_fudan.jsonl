@@ -1,0 +1,14 @@
+{"id": "f01", "q": "院校B插班生数学真题 极限题", "scope": "kmath", "expect": ["院校B真题集"], "note": "院校B数学真题集整体命中"}
+{"id": "f02", "q": "院校B2017极限 cosx加根号下1加3x平方", "scope": "kmath", "expect": ["院校B真题集"], "note": "IMG_0131 题干特征词"}
+{"id": "f03", "q": "院校B2001求极限 ln arctan x 之差", "scope": "kmath", "expect": ["院校B真题集"], "note": "IMG_0131 题干特征词"}
+{"id": "f04", "q": "院校B2003求极限 arctan x 乘 lnx 乘 sinx", "scope": "kmath", "expect": ["院校B真题集"], "note": "IMG_0131 题干特征词"}
+{"id": "f05", "q": "院校B2005极限 tanx 减 sinx 比 tanx 减 sinx", "scope": "kmath", "expect": ["院校B真题集"], "note": "IMG_0131 题干特征词"}
+{"id": "f06", "q": "院校B2023插班生数学真题 证明题", "scope": "kmath", "expect": ["2023年院校B"], "note": "2023真题 PDF/图"}
+{"id": "f07", "q": "院校B2023数学 f导等于sinx 且 f0等于1 求f", "scope": "kmath", "expect": ["2023年院校B"], "note": "2023 真题题干特征"}
+{"id": "f08", "q": "院校B插班生数学 微分方程 真题", "scope": "kmath", "expect": ["院校B真题集"], "note": "院校B数学高数综合"}
+{"id": "f09", "q": "院校B数学真题 不定积分 题目", "scope": "kmath", "expect": ["院校B真题集"], "note": "积分类"}
+{"id": "f10", "q": "院校B数学 极限 等价无穷小 插班生真题", "scope": "kmath", "expect": ["院校B真题集"], "note": "综合词汇"}
+{"id": "f11", "q": "院校B插班生英语真题", "scope": "ken", "expect": ["英语真题集/院校B", "院校B插班生英语讲义", "院校B真题/院校B"], "note": "院校B英语真题集/讲义（含旧目录 院校B真题\\院校B\\）"}
+{"id": "f12", "q": "院校B插班生英语讲义参考答案", "scope": "ken", "expect": ["院校B插班生英语讲义参考答案"], "note": "讲义"}
+{"id": "f13", "q": "机构A插班生英语 院校B随堂测试试卷", "scope": "ken", "expect": ["随堂测试"], "note": "随堂测试"}
+{"id": "f14", "q": "院校B考插数学怎么复习 刷真题", "scope": "auto", "expect": ["院校B真题集", "2023年院校B"], "expect_scope": "kmath", "note": "auto 路由验证"}
